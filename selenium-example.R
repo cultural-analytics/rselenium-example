@@ -6,6 +6,7 @@
 library(tidyverse)
 library(rvest)
 library(RSelenium)
+library(robotstxt)
 
 driver <- rsDriver(browser=c("chrome"), chromever="85.0.4183.83")
 remote_driver <- driver[["client"]]
@@ -23,3 +24,17 @@ for (i in seq_along(scrape.list)) {
 }
 
 scrape.urls
+
+#####################################################
+# Accessing robots.txt and delaying scraping scripts
+#####################################################
+
+r_text <- get_robotstxt("https://www.thingiverse.com/")
+r_text <- parse_robotstxt(r_text)
+r_text
+
+# Show the amount of delay
+r_text$crawl_delay$value
+
+# Delays for the amount of seconds given
+Sys.sleep(3)
