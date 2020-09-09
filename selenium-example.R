@@ -1,7 +1,9 @@
-# tutorial example based on RSelenium docs: https://cran.r-project.org/web/packages/RSelenium/RSelenium.pdf
-# the following tutorials were also useful:
-#http://joshuamccrain.com/tutorials/web_scraping_R_selenium.html
-#https://www.rpubs.com/widai/scraping_data_with_RSelenium
+############################################################################################################
+# Tutorial example based on RSelenium docs: https://cran.r-project.org/web/packages/RSelenium/RSelenium.pdf
+# The following tutorials may also be useful to your projects:
+#  http://joshuamccrain.com/tutorials/web_scraping_R_selenium.html
+#  https://www.rpubs.com/widai/scraping_data_with_RSelenium
+############################################################################################################
 
 library(tidyverse)
 library(rvest)
